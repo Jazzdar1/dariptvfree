@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Clappr Player</title>
+  <style>body { margin: 0; padding: 0; }</style>
+</head>
+<body>
+  <!-- Include Clappr from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+
+  <!-- Player container -->
+  <div id="player" style="width: 100%; height: 100vh;"></div>
+
+  <script>
+    // Initialize the Clappr player
+    var player = new Clappr.Player({
+      source: 'https://watchtvs.live/discovery/m3u8/Discovery_Channel.m3u8', // Example HLS stream URL
+      parentId: '#player',
+      width: '100%',
+      height: '100%',
+      autoPlay: true,
+    });
+  </script>
+</body>
+</html>
